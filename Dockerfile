@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN yarn install
 COPY . .
-CMD ["yarn", "start"]
+RUN yarn build
 
 # /app/build <-- all the stuff we need for prod
 

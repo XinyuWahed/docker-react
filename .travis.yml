@@ -3,6 +3,6 @@ services:
   - docker
 
 before_install:
-  - docker build -t xinyuwahed/docker-react -f Dockerfile.dev
+  - docker build -t xinyuwahed/docker-react -f Dockerfile.dev .
 
 script: docker run -e CI=true xinyuwahed/docker-react yarn test
